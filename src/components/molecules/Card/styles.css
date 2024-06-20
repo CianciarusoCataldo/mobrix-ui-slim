@@ -1,0 +1,32 @@
+[data-mbx-id*="card"] {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  background: var(--mbx-c-card-bg);
+  color: var(--mbx-c-card-txt);
+  padding: 0.25rem;
+}
+
+[data-mbx-id*="card"] [data-mbx-class="header"] {
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+
+[data-mbx-id*="card"] [data-mbx-class="body"] {
+  padding: 0.25rem;
+  margin: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+[data-mbx-id*="card"] [data-mbx-class="footer"] {
+  margin-top: 0.3rem;
+  padding: 0.3rem;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}

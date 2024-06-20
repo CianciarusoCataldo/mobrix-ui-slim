@@ -1,0 +1,12 @@
+[data-mbx-id="label"] {
+  color: var(--mbx-c-lab-txt);
+  background: transparent;
+}
+
+[data-mbx-id="label"][data-mbx-a11y="true"]:focus-visible {
+  color: var(--mbx-c-fc);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+}

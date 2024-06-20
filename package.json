@@ -1,0 +1,98 @@
+{
+  "name": "mobrix-ui-slim",
+  "version": "1.0.0",
+  "description": "Base MoBrix-ui library. It includes smart functionalities and basic styles configuration.",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "config/rollup.build.config.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CianciarusoCataldo/mobrix-ui-slim.git"
+  },
+  "engines": {
+    "node": ">=18.X.0"
+  },
+  "keywords": [
+    "ui",
+    "ui-lib",
+    "ui-library",
+    "ui-components",
+    "react-lib",
+    "react-library",
+    "react-libraries",
+    "react-ui",
+    "react-ui-components",
+    "react-ui-components-library",
+    "react-ui-components-libraries",
+    "react-ui-library",
+    "react-ui-libraries",
+    "react-components",
+    "react-components-library",
+    "react-components-libraries"
+  ],
+  "author": "Cataldo Cianciaruso",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CianciarusoCataldo/mobrix-ui-slim/issues"
+  },
+  "homepage": "https://github.com/CianciarusoCataldo/mobrix-ui-slim#readme",
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/preset-env": "^7.16.0",
+    "@babel/preset-react": "^7.16.0",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@types/enzyme": "^3.10.12",
+    "@types/jest": "^27.0.2",
+    "@types/mocha": "^9.0.0",
+    "@types/react": ">=16",
+    "@types/react-router-dom": "^5.3.3",
+    "babel-jest": "^29.x.x",
+    "chokidar": "^3.5.3",
+    "chokidar-cli": "^3.0.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "jest": "29.x.x",
+    "jest-environment-jsdom": "^29.6.1",
+    "jest-transform-stub": "^2.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-import": "^15.1.0",
+    "react": ">=16",
+    "rollup": "^4.12.0",
+    "rollup-plugin-analyzer": "^4.0.0",
+    "rollup-plugin-banner2": "^1.2.2",
+    "rollup-plugin-cleanup": "^3.2.1",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "rollup-plugin-visualizer": "^5.5.4",
+    "semver": "^7.6.0",
+    "ts-jest": "^29.x.x",
+    "typescript": ">4.X.X"
+  },
+  "scripts": {
+    "build": "rollup -c ./config/rollup.build.config.js",
+    "build:dev": "rollup -c ./config/rollup.dev.config.js",
+    "analyze": "rollup -c ./config/rollup.analyze.config.js",
+    "build-watch": "rollup -c ./config/rollup.dev.config.js -w",
+    "watch": "chokidar \"src/**/*.css\" \"src/**/*.tsx\" \"src/**/*.ts\" -c \"npm run build:dev\"",
+    "check-types": "tsc",
+    "prestart": "npm run build:dev",
+    "start": "npm-run-all --parallel \"watch\" \"start-playground\"",
+    "init": "sh ./scripts/init.sh",
+    "start-playground": "cd playground && npm run start",
+    "build-playground": "cd playground && npm run build",
+    "serve:test-app": "npm-run-all --parallel \"watch\" \"start:test-app\"",
+    "start:test-app": "cd test-app && npm run start",
+    "deploy": "sh ./scripts/deploy.sh",
+    "test": "sh ./scripts/start-tests.sh",
+    "generate-docs": "sh docs-gen/utils/generate-docs.sh"
+  }
+}

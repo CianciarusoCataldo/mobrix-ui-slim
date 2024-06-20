@@ -1,0 +1,13 @@
+{
+  "since": "1.0.0",
+  "description": "A button component, designed for a lot of scenarios.",
+  "examples": [],
+  "extend": {
+    "group": {
+      "ComponentWithChildren": {
+        "type": "JSX.Element | string"
+      },
+      "ClickableComponent": {}
+    }
+  }
+}

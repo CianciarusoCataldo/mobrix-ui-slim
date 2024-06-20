@@ -1,0 +1,56 @@
+[data-mbx-id="toggle"] {
+  width: 65px;
+  height: 30px;
+  background: var(--mbx-c-tog-bg);
+  border-radius: 40px;
+  border-width: 0;
+}
+
+[data-mbx-id="toggle"][data-mbx-enabled="false"] {
+  opacity: 0.7;
+}
+
+[data-mbx-id="toggle"] [data-mbx-class="toggle-icon"] {
+  overflow: hidden;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+}
+
+[data-mbx-id="toggle"] [data-mbx-class="toggle-icon"][data-mbx-flip="true"] {
+  transform: translate(0%);
+
+  --svginternalcolor: var(--mbx-c-tog-ic-on-int);
+  --svgexternalcolor: var(--mbx-c-tog-ic-on-ext);
+}
+
+[data-mbx-id="toggle"] [data-mbx-class="toggle-icon"][data-mbx-flip="false"] {
+  transform: translate(35px);
+  --svginternalcolor: var(--mbx-c-tog-ic-off-int);
+  --svgexternalcolor: var(--mbx-c-tog-ic-off-ext);
+}
+
+[data-mbx-id="toggle"]
+  [data-mbx-class="toggle-icon"]
+  [data-mbx-class="wrapper"] {
+  opacity: 0.2;
+}
+
+[data-mbx-id="toggle"]
+  [data-mbx-class="toggle-icon"]
+  [data-mbx-class="external"] {
+  background-color: var(--svgexternalcolor);
+  fill: var(--svgexternalcolor);
+}
+
+[data-mbx-id="toggle"]
+  [data-mbx-class="toggle-icon"]
+  [data-mbx-class="internal"] {
+  fill: var(--svgexternalcolor);
+  stroke: var(--svginternalcolor);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+}

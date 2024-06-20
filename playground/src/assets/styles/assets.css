@@ -1,0 +1,37 @@
+body.light .left-arrow {
+  fill: black;
+}
+
+body.dark .left-arrow {
+  fill: white;
+}
+
+body .left-arrow:hover {
+  fill: #ff9f51;
+}
+
+body .left-arrow:active {
+  fill: #fb7a10;
+}
+
+body .demo-row {
+  align-items: center;
+}
+
+body .demo-row .box-container .box {
+  max-width: 8rem;
+}
+
+body #preview {
+  margin: 0.6rem;
+}
+
+.test-class{
+  width: 2rem;
+}
+
+@media (max-width: 400px) {
+  body .previewer-container {
+    margin: 0.3rem;
+  }
+}
